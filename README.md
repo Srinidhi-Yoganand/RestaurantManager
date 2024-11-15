@@ -39,23 +39,55 @@ A simple **Restaurant Management System** built with **MERN stack** (MongoDB, Ex
 - **Login / Register**: Users must first register an account and then log in to access protected routes.
 - **Manage Restaurants**: Once logged in, users can add, update, or delete restaurants from the database. A list of restaurants will be displayed once logged in.
 
+# Restaurant Management System
+
 ## Screenshots
 
 ### Login / Register
+- **Login Page**  
+  The login page allows users to authenticate and access the restaurant management system. Users can enter their credentials to gain access.  
+  ![Login](screenshots/login.png)
 
-![Login](screenshots/login.png)
-![Register](screenshots/register.png)
+- **Register Page**  
+  The register page enables new users to create an account by entering their details. This step is necessary for accessing the system if you don't already have an account.  
+  ![Register](screenshots/register.png)
 
 ### Restaurant Management
 
-![General UI](screenshots/restaurant_management1.png)
-![General UI](screenshots/restaurant_management2.png)
+- **General Restaurant Management UI**  
+  This is the main interface for managing restaurants within the system. It provides options to add, update, and delete restaurants, as well as view the list of existing restaurants.  
+  ![General UI](screenshots/restaurant_management1.png)
 
-![Adding Restaurant Info](screenshots/insert_restaurant1.png)
-![Adding Restaurant Info](screenshots/insert_restaurant2.png)
+- **Listing All Restaurants**  
+  This screen displays a list of all the restaurants managed within the system. Each restaurant is shown with basic details such as name, location, and status.  
+  ![General UI](screenshots/restaurant_management2.png)
 
-![Updating Restaurant Info](screenshots/update_restaurant1.png)
-![Updating Restaurant Info](screenshots/update_restaurant2.png)
+### Inserting a Restaurant
 
-![Deleting Restaurant Info](screenshots/delete_restaurant1.png)
-![Deleting Restaurant Info](screenshots/delete_restaurant2.png)
+- **Adding Restaurant Information (Step 1)**  
+  In this screen, users can enter the initial details of a new restaurant, including name, location, and type of cuisine.  
+  ![Adding Restaurant Info](screenshots/insert_restaurant1.png)
+
+- **Adding Restaurant Information (Step 2)**  
+  We can see that the restaurant is added to our list.  
+  ![Adding Restaurant Info](screenshots/insert_restaurant2.png)
+
+### Updating Restaurant Info
+
+- **Updating Restaurant Information (Step 1)**  
+  This UI allows users to edit the information of an existing restaurant, such as updating the name, location, or rating.  
+  ![Updating Restaurant Info](screenshots/update_restaurant1.png)
+
+- **Updating Restaurant Information (Step 2)**  
+  We can see that the information about the restaurant is updated.  
+  ![Updating Restaurant Info](screenshots/update_restaurant2.png)
+
+### Deleting a Restaurant
+
+- **Deleting a Restaurant (Step 1)**  
+  This screen is used to initiate the deletion of a restaurant. Users can select a restaurant to remove from the system.  
+  ![Deleting Restaurant Info](screenshots/delete_restaurant1.png)
+
+- **Deleting a Restaurant (Step 2)**  
+  We can see that the restaurant has been removed from our list.  
+  ![Deleting Restaurant Info](screenshots/delete_restaurant2.png)
