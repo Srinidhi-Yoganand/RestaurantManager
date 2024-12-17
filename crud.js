@@ -138,10 +138,10 @@ app.post('/insertRestaurants', verifyToken, async (req, res) => {
     });
 
     await restaurant.save();
-    res.status(200).send('Restaurant inserted successfully');
+    res.status(200).send({message: 'Restaurant inserted successfully'});
   } catch (err) {
     console.error('Error saving restaurant:', err);
-    res.status(400).send('Error saving restaurant: ' + err.message);
+    res.status(400).send({message: 'Error saving restaurant: ' + err.message});
   }
 });
 
@@ -156,13 +156,13 @@ app.put('/updateRestaurant/:id', verifyToken, async (req, res) => {
     );
 
     if (!restaurant) {
-      return res.status(404).send('Restaurant not found');
+      return res.status(404).send({message: 'Restaurant not found'});
     }
 
-    res.status(200).send('Restaurant updated successfully');
+    res.status(200).send({message: 'Restaurant updated successfully'});
   } catch (err) {
     console.error('Error updating restaurant:', err);
-    res.status(400).send('Error updating restaurant: ' + err.message);
+    res.status(400).send({ message: 'Error updating restaurant: ' + err.message });
   }
 });
 
@@ -171,13 +171,13 @@ app.delete('/deleteRestaurant/:id', verifyToken, async (req, res) => {
     const restaurant = await Restaurant.findOneAndDelete({ id: req.params.id });
 
     if (!restaurant) {
-      return res.status(404).send('Restaurant not found');
+      return res.status(404).send({ message: 'Restaurant not found' });
     }
 
-    res.status(200).send('Restaurant deleted successfully');
+    res.status(200).send({ message: 'Restaurant deleted successfully' });
   } catch (err) {
     console.error('Error deleting restaurant:', err);
-    res.status(400).send('Error deleting restaurant: ' + err.message);
+    res.status(400).send({ message: 'Error deleting restaurant: ' + err.message });
   }
 });
 

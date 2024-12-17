@@ -60,11 +60,13 @@ const App = () => {
         await axios.put(`http://localhost:8001/updateRestaurant/${editing}`, newRestaurant, {
           headers: { Authorization: `Bearer ${token}` } 
         });
+        alert('Restaurant updated successfully!');
         setEditing(null);
       } else {
         await axios.post('http://localhost:8001/insertRestaurants', newRestaurant, {
           headers: { Authorization: `Bearer ${token}` } 
         });
+        alert('Restaurant added successfully!')
       }
       setNewRestaurant({
         id: '',
@@ -76,6 +78,7 @@ const App = () => {
       });
       fetchRestaurants();
     } catch (error) {
+      alert(error.response?.data?.message || 'Error saving restaurant.');
       console.error('Error saving restaurant:', error);
     }
   };
@@ -85,8 +88,10 @@ const App = () => {
       await axios.delete(`http://localhost:8001/deleteRestaurant/${id}`, {
         headers: { Authorization: `Bearer ${token}` } 
       });
+      alert('Restaurant deleted successfully!');
       fetchRestaurants();
     } catch (error) {
+      alert(error.response?.data?.message || 'Error deleting restaurant.');
       console.error('Error deleting restaurant:', error);
     }
   };
