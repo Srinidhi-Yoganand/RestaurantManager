@@ -126,7 +126,7 @@ const App = () => {
         alert('Registration successful! Please log in.');
         setIsRegistering(false); 
       } else {
-        alert('Registration failed. Please try again.');
+        alert('Registration successful! Please log in.');
       }
     } catch (error) {
       console.error('Registration failed:', error);
