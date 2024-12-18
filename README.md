@@ -16,6 +16,7 @@ A simple **Restaurant Management System** built with **MERN stack** (MongoDB, Ex
 - **Database**: MongoDB
 - **Authentication**: JWT (JSON Web Token)
 - **Password Hashing**: bcryptjs
+- **Testing**: Selenium
 
 ### Prerequisites
 
